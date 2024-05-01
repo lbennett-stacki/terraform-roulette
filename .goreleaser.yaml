@@ -17,7 +17,7 @@ brews:
       owner: lbennett-stacki
       name: terraform-roulette
     name: terraform-roulette
-    url_template: "https://github.com/<repo_owner>/<repo_name>/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+    url_template: "https://github.com/lbennett-stacki/terraform-roulette/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
     homepage: https://github.com/lbennett-stacki/terraform-roulette
     commit_author:
       name: Luke Bennett
