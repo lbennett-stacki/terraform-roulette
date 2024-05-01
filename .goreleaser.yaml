@@ -28,6 +28,7 @@ brews:
     dependencies:
       - name: terraform
       - name: go
+    directory: Formula
 
 archives:
   - format: tar.gz
