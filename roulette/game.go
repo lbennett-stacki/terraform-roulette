@@ -8,8 +8,8 @@ import (
 )
 
 var overrides = map[string]int{
-	"destroy":              25,
-	"apply --auto-approve": 50,
+	"destroy --auto-approve": 25,
+	"apply --auto-approve":   50,
 }
 
 var overrideables = []string{"apply", "plan", "destroy"}
