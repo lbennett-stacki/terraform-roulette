@@ -5,7 +5,7 @@
 class TerraformRoulette < Formula
   desc "Terraform CLI if it was inspired by roulette"
   homepage "https://github.com/lbennett-stacki/terraform-roulette"
-  version "0.0.3"
+  version "0.0.5"
   license "MIT"
 
   depends_on "go"
@@ -13,16 +13,16 @@ class TerraformRoulette < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/<repo_owner>/<repo_name>/releases/download/v0.0.3/terraform-roulette_Darwin_x86_64.tar.gz"
-      sha256 "bd903e093033da5c1f592221d101679dc0a7b1715eff57222853b28bd0e01bb0"
+      url "https://github.com/<repo_owner>/<repo_name>/releases/download/v0.0.5/terraform-roulette_Darwin_x86_64.tar.gz"
+      sha256 "9c5b004fa25c0a730d94c3b870bbe59a328e0daaca74fe0a006e8162e986cdcc"
 
       def install
         bin.install "terraform-roulette"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/<repo_owner>/<repo_name>/releases/download/v0.0.3/terraform-roulette_Darwin_arm64.tar.gz"
-      sha256 "0b099d64910f2bd64b68c5ae51f3ece8983cfd63760ddca0826d2232bde173dc"
+      url "https://github.com/<repo_owner>/<repo_name>/releases/download/v0.0.5/terraform-roulette_Darwin_arm64.tar.gz"
+      sha256 "da3465f15162d3eb47255f71305e02e3c340e71c54582cb95fe6dc3ee6995cbf"
 
       def install
         bin.install "terraform-roulette"
@@ -32,16 +32,16 @@ class TerraformRoulette < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/<repo_owner>/<repo_name>/releases/download/v0.0.3/terraform-roulette_Linux_x86_64.tar.gz"
-      sha256 "a8f6624aef6d3f9a57a07d733bdaec2b1d42ee082ffeb0ec321ee43e7b66aa17"
+      url "https://github.com/<repo_owner>/<repo_name>/releases/download/v0.0.5/terraform-roulette_Linux_x86_64.tar.gz"
+      sha256 "89ccb479795e86a7e49b73739a684e82f0ee5c781b927192d950b886de60fdcf"
 
       def install
         bin.install "terraform-roulette"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/<repo_owner>/<repo_name>/releases/download/v0.0.3/terraform-roulette_Linux_arm64.tar.gz"
-      sha256 "3cc1ce22b5c8d9d1f03cb5fcfa165c602b7b0122fb6f55c860daaf43d42f7af7"
+      url "https://github.com/<repo_owner>/<repo_name>/releases/download/v0.0.5/terraform-roulette_Linux_arm64.tar.gz"
+      sha256 "05514d005c2f5a60e796d1fa4ad4ad3c7f3ae0055b46de2d0e7cdcbad4325cc3"
 
       def install
         bin.install "terraform-roulette"
