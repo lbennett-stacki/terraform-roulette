@@ -13,21 +13,21 @@ builds:
       - darwin
 
 brews:
-  tap:
-    owner: lbennett-stacki
+  - tap:
+      owner: lbennett-stacki
+      name: terraform-roulette
     name: terraform-roulette
-  name: terraform-roulette
-  url_template: "https://github.com/<repo_owner>/<repo_name>/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
-  homepage: https://github.com/lbennett-stacki/terraform-roulette
-  commit_author:
-    name: Luke Bennett
-    email: lbennett@fastmail.com
-  caveats: ""
-  description: "Terraform CLI if it was inspired by roulette"
-  license: "MIT"
-  dependencies:
-    - name: terraform
-    - name: go
+    url_template: "https://github.com/<repo_owner>/<repo_name>/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+    homepage: https://github.com/lbennett-stacki/terraform-roulette
+    commit_author:
+      name: Luke Bennett
+      email: lbennett@fastmail.com
+    caveats: ""
+    description: "Terraform CLI if it was inspired by roulette"
+    license: "MIT"
+    dependencies:
+      - name: terraform
+      - name: go
 
 archives:
   - format: tar.gz
