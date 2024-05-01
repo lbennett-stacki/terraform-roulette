@@ -10,4 +10,7 @@ Should only be used for Friday deploys.
 ```bash
 brew tap lbennett-stacki/taps
 brew install terraform-roulette
+
+cd some-really-important-stack
+terraform-rouelette plan
 ```
