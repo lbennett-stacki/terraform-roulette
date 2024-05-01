@@ -25,9 +25,6 @@ brews:
     caveats: ""
     description: "Terraform CLI if it was inspired by roulette"
     license: "MIT"
-    dependencies:
-      - name: terraform
-      - name: go
     directory: Formula
 
 archives:
