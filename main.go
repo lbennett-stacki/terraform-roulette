@@ -2,8 +2,11 @@ package main
 
 import (
 	"terraform-roulette/cli"
+	"terraform-roulette/roulette"
 )
 
 func main() {
-	cli.RunCli()
+	command, args := cli.ParseArgs()
+
+	roulette.Play(command, args)
 }

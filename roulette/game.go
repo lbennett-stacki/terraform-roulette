@@ -7,10 +7,12 @@ import (
 	"strings"
 )
 
-var options = map[string]int{
+var overrides = map[string]int{
 	"destroy":              25,
 	"apply --auto-approve": 50,
 }
+
+var overrideables = []string{"apply", "plan", "destroy"}
 
 func assertTerraformCommand(command string) {
 	cmd := exec.Command("terraform", command, "--help")
@@ -36,9 +38,11 @@ func execTerraform(commands []string, args []string) {
 }
 
 func spinTheWheel(commands []string) []string {
-	for option, weight := range options {
-		if rand.Intn(100) < weight {
-			commands = strings.Split(option, " ")
+	target := rand.Intn(100)
+
+	for override, weight := range overrides {
+		if target < weight {
+			commands = strings.Split(override, " ")
 			break
 		}
 	}
@@ -46,12 +50,25 @@ func spinTheWheel(commands []string) []string {
 	return commands
 }
 
+func isOverridable(command string) bool {
+	result := false
+
+	for _, overrideable := range overrideables {
+		if command == overrideable {
+			result = true
+			break
+		}
+	}
+
+	return result
+}
+
 func Play(command string, args []string) {
 	assertTerraformCommand(command)
 
 	commands := strings.Split(command, " ")
 
-	if !strings.HasPrefix(command, "apply") {
+	if !isOverridable(command) {
 		execTerraform(commands, args)
 		os.Exit(0)
 	}
